@@ -16,5 +16,6 @@ class ChatMessage(Base):
     response = Column(String)
     timestamp = Column(DateTime, default=datetime.datetime.utcnow)
 
+    feedback = relationship("Feedback", back_populates="chat_message")
     user = relationship("User", back_populates="messages")
     course = relationship("Course", back_populates="messages")

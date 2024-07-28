@@ -16,6 +16,7 @@ class User(Base):
     )
     is_admin = Column(Boolean, default=False)
 
+    feedback = relationship("Feedback", back_populates="user")
     courses_taught = relationship("Course", back_populates="lecturer")
     enrolled_courses = relationship(
         "Course", secondary="course_enrollment", back_populates="enrolled_students"

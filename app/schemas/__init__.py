@@ -5,6 +5,7 @@ from app.schemas.course import (
     CourseUpdate,
     CourseWithEnrollment,
 )
+from app.schemas.feedback import FeedbackCreate, FeedbackInDB
 from app.schemas.user import (
     AdminCreate,
     Token,

@@ -1,1 +1,1 @@
-from . import chat, course, user
+from . import chat, course, feedback, user

@@ -1,9 +1,9 @@
 from datetime import datetime
-from typing import Optional
+from typing import List
 
 from pydantic import BaseModel
 
-from app.schemas import FeedbackInDB
+from .feedback import FeedbackInDB
 
 
 class ChatMessageBase(BaseModel):
@@ -21,7 +21,7 @@ class ChatMessageInDB(ChatMessageBase):
     response: str
     timestamp: datetime
 
-    feedback: Optional[FeedbackInDB] = None
+    feedback: List[FeedbackInDB] = []
 
     class Config:
         from_attributes = True
